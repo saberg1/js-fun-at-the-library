@@ -16,36 +16,24 @@ function unshelfBook(title, sciFiShelf){
 }
 
 function listTitles(titles){
-console.log(titles.title)
-  
+  for(var i = 0; i < 5; i++){
+    return titles[i].title
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function searchShelf(sciFiShelf, titles){
+  for(var i = 0; i < sciFiShelf.length; i++){
+    if(sciFiShelf[i].title.includes(titles)){
+      return true
+    } else {
+      return false
+    }
+  }
+}
 
 module.exports = {
   shelfBook,
   unshelfBook,
   listTitles,
-  // searchShelf
+  searchShelf
 };
