@@ -7,9 +7,7 @@ function buildMainCharacter(name, age, pronouns){
 };
 
 function saveReview(review, reviews){
-  if(reviews.includes(review)){
-    return;
-  }else{
+  if(!reviews.includes(review)){
     reviews.push(review);
     };
   };

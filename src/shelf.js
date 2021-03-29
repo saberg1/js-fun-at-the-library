@@ -16,19 +16,21 @@ function unshelfBook(title, sciFiShelf){
 }
 
 function listTitles(titles){
-  for(var i = 0; i < 5; i++){
-    return titles[i].title
+  var titlesOnShelf = "";
+  for(var i = 0; i < titles.length; i++){
+    titlesOnShelf += titles[i].title + ", "
+    slicedTitles = titlesOnShelf.slice(0, -2)
   }
+  return slicedTitles
 }
 
 function searchShelf(sciFiShelf, titles){
   for(var i = 0; i < sciFiShelf.length; i++){
-    if(sciFiShelf[i].title.includes(titles)){
+    if(sciFiShelf[i].title === titles){
       return true
-    } else {
-      return false
     }
   }
+  return false 
 }
 
 module.exports = {
